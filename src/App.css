@@ -1,0 +1,59 @@
+/* General styles for the app */
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  /* Make sure the container takes full height */
+  #root {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif; /* Change font as needed */
+    background-color: #f8f9fa; /* Set a background color for the app */
+  }
+  
+  /* Prevent scrolling inside sliders or carousels */
+  .slick-list {
+    overflow: hidden !important;
+  }
+  
+  .slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header {
+    height: 100vh;
+    overflow: hidden; /* Prevent scrolling in hero section */
+  }
+  
+  /* General utility classes */
+  .hidden-scrollbar {
+    overflow-y: hidden;
+  }
+  
+  /* Ensure that no vertical overflow occurs */
+  .container {
+    height: 100%;
+    overflow: hidden;
+  }
+/* Disable pinch-zoom on touch devices */
+html, body {
+    touch-action: manipulation;
+  }
+  
+  body {
+    overscroll-behavior: contain;
+  }
+    
