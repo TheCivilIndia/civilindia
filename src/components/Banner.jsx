@@ -84,11 +84,12 @@ const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
             }`}
           >
             <motion.img
-              initial={{ opacity: 0, scale: 0.5 }}
+              // initial={{ opacity: 0, scale: 0.5 }}
+              initial={false}
               animate={isInView ? { opacity: 1, scale: 1 } : {}} // Trigger only once when in view
               transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
               src={image}
-              alt="Banner 2"
+              alt="Banner 1"
               loading="lazy"
               className=" w-[300px] sm:w-[350px] lg:w-[400px] h-full object-cover rounded-2xl"
             />
