@@ -88,7 +88,8 @@ const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
               animate={isInView ? { opacity: 1, scale: 1 } : {}} // Trigger only once when in view
               transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
               src={image}
-              alt="Banner"
+              alt="Banner 2"
+              loading="lazy"
               className=" w-[300px] sm:w-[350px] lg:w-[400px] h-full object-cover rounded-2xl"
             />
           </div>
