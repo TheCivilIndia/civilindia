@@ -213,7 +213,7 @@ import { motion } from 'framer-motion';
 import image1 from '../assets/hero/Hero1.jpg';
 import image2 from '../assets/hero/Hero4.webp';
 import imagemob4 from '../assets/hero/Hero4.jpeg';
-import image3 from '../assets/hero/Hero3.jpg';
+import image3 from '../assets/hero/Hero3.webp';
 import image4 from '../assets/hero/Hero5.webp';
 import image5 from '../assets/hero/Hero6.webp';
 import { FaGooglePlay } from 'react-icons/fa';
@@ -333,6 +333,13 @@ const HeroSection = () => {
 
   return (
     <header className="relative w-full mt-[72px] lg:mt-0 bg-white">
+    <img
+    src={image2}
+    alt=""
+    style={{ display: 'none' }}
+    fetchPriority="high"
+    decoding="async"
+  />
       {/* Console log for debugging; remove in production */}
       { console.log("mobile", isMobile) }
       <div className="relative z-10">
