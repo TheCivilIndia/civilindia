@@ -125,9 +125,12 @@ const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
               className="flex justify-center md:justify-start"
             >
               <Link to={link}>
-                <button className=" bg-blue-600 px-6 py-2 rounded-md text-white font-semibold !mt-5 cursor-pointer">
+                {/* <button className=" bg-blue-600 px-6 py-2 rounded-md text-white font-semibold !mt-5 cursor-pointer">
                 Get Started
-              </button>
+              </button> */}
+              <button className="bg-blue-600 px-8 py-3 rounded-md text-white font-semibold !mt-5 cursor-pointer">
+  Get Started
+</button>
               </Link>
             </motion.div>
           </div>
