@@ -114,14 +114,16 @@ const Footer = () => {
                 <FaApple />
                 App Store
               </button> */}
-              <button className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg hover:scale-105 hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out">
+              <a className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg hover:scale-105 hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out">
                 <FaApple className="mr-2 text-2xl" />
                 App Store
-              </button>
-              <button className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg hover:scale-105 hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.civil.india.official&hl=en-US" 
+  target="_blank" 
+  rel="noopener noreferrer" className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg hover:scale-105 hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out">
                 <FaGooglePlay className="mr-2 text-2xl" />
                 Play Store
-              </button>
+              </a>
 
               {/* <button className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg">
                 <img

@@ -67,6 +67,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { SlideUp } from "../utility/animation";
+import { Link } from "react-router-dom";
 
 const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
   const ref = useRef(null); // Create a reference to track the component
@@ -123,9 +124,11 @@ const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
               animate={isInView ? "visible" : "hidden"} // Trigger only once when in view
               className="flex justify-center md:justify-start"
             >
-              <button className=" bg-blue-600 px-6 py-2 rounded-md text-white font-semibold !mt-5">
+              <Link to={link}>
+                <button className=" bg-blue-600 px-6 py-2 rounded-md text-white font-semibold !mt-5 cursor-pointer">
                 Get Started
               </button>
+              </Link>
             </motion.div>
           </div>
         </div>

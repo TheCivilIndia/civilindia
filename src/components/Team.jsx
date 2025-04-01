@@ -22,7 +22,7 @@ const Team = ({id}) => {
         <h1 className="mt-4 text-2xl font-semibold text-blue-900 capitalize">
         {member.name}
         </h1>
-        <p className="mt-2 text-blue-500 capitalize">{member.role}</p>
+        <p className="mt-2 text-blue-900 font-bold capitalize">{member.role}</p>
         {/* <div className="flex mt-3 -mx-2">
           <a
             href="#"

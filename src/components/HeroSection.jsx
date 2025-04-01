@@ -317,7 +317,7 @@ const HeroSection = () => {
       highlight: "The Civil India",
       subtitle: "Your Pathway to Success in Civil Services Exams",
       buttonText: "Play store",
-      buttonLink: "#courses",
+      buttonLink: "https://play.google.com/store/apps/details?id=com.civil.india.official&hl=en-US"
     },
     {
       image: image2,
@@ -420,6 +420,8 @@ const HeroSection = () => {
                     </motion.a> */}
                   { content.buttonLink &&  <motion.a
   href={content.buttonLink}
+  target="_blank" 
+  rel="noopener noreferrer" 
   className="flex items-center justify-center bg-blue-900 text-md md:text-2xl text-white py-2 md:py-3 px-3 md:px-6 rounded-lg hover:scale-105 hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out"
   variants={introVariant}
   transition={{ duration: 1.2, delay: 0.5 }} // Delay and longer duration for button
