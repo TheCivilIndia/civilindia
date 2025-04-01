@@ -211,11 +211,11 @@ import React, { useEffect, useState, useCallback, memo } from 'react';
 import Slider from 'react-slick';
 import { motion } from 'framer-motion';
 import image1 from '../assets/hero/Hero1.jpg';
-import image2 from '../assets/hero/Hero04.svg';
+import image2 from '../assets/hero/Hero4.webp';
 import imagemob4 from '../assets/hero/Hero4.jpeg';
 import image3 from '../assets/hero/Hero3.jpg';
-import image4 from '../assets/hero/Hero5.svg';
-import image5 from '../assets/hero/Hero6.svg';
+import image4 from '../assets/hero/Hero5.webp';
+import image5 from '../assets/hero/Hero6.webp';
 import { FaGooglePlay } from 'react-icons/fa';
 
 /* 

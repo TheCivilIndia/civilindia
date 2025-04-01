@@ -118,7 +118,8 @@ const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
           transition={{ type: "spring", stiffness: 100, delay: 0.3 }}
           src={image}
           alt="Banner 1"
-          {...(isMobile ? (reverse ? { loading: "lazy" } : {}) : { loading: "lazy" })}
+          {...(isMobile ? (reverse ? { loading: "lazy" } : {  fetchPriority: "high", decoding: "async" }) : { loading: "lazy" })}
+
           className="w-[300px] sm:w-[350px] lg:w-[400px] h-full object-cover rounded-2xl"
         />
           </div>
