@@ -155,13 +155,13 @@ const Banner = ({ image, title, subtitle, link, tag, reverse }) => {
               animate={isInView ? "visible" : "hidden"} // Trigger only once when in view
               className="flex justify-center md:justify-start"
             >
-              <Link to={link}>
+              <Link to={link} className="bg-blue-600 px-8 py-3 rounded-md text-white font-semibold !mt-5 cursor-pointer">
                 {/* <button className=" bg-blue-600 px-6 py-2 rounded-md text-white font-semibold !mt-5 cursor-pointer">
                 Get Started
               </button> */}
-              <button className="bg-blue-600 px-8 py-3 rounded-md text-white font-semibold !mt-5 cursor-pointer">
+             
   Get Started
-</button>
+
               </Link>
             </motion.div>
           </div>

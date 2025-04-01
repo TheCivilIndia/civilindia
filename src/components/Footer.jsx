@@ -103,7 +103,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="mt-8 w-full md:mt-0 md:w-auto">
-            <h6 className="text-white mb-3">Get the app</h6>
+            <p className="text-white mb-3">Get the app</p>
             <div className="flex flex-col gap-2">
               {/* <button className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg">
                 <img
@@ -167,16 +167,16 @@ const Footer = () => {
 
 
           <div className="flex gap-2">
-            <a href="https://www.youtube.com/@thecivilindiakanpur8682" target="_blank">
+            <a href="https://www.youtube.com/@thecivilindiakanpur8682" target="_blank" aria-label='Youtube link'  >
               <FaYoutube className="text-white text-2xl opacity-75" />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=100069365156747" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=100069365156747" target="_blank" aria-label='facebook link'  >
               <FaFacebook className="text-white text-2xl opacity-75" />
             </a>
-            <a href="https://www.instagram.com/thecivilindia/?utm_medium=copy_link" target="_blank">
+            <a href="https://www.instagram.com/thecivilindia/?utm_medium=copy_link" target="_blank" aria-label='instagram link'  >
               <FaInstagram className="text-white text-2xl opacity-75" />
             </a>
-            <a href="https://t.me/thecivilindiakanpur" target="_blank">
+            <a href="https://t.me/thecivilindiakanpur" target="_blank" aria-label='Telegram link'  >
               <FaTelegram className="text-white text-2xl opacity-75" />
             </a>
           </div>

@@ -187,7 +187,7 @@ export function Navbar() {
           </ul>
         </div>
       )} */}
-      <button ref={hamburgerButtonRef} className="lg:hidden mr-3 text-2xl" onClick={handleOpen}>
+      <button ref={hamburgerButtonRef} name="menu-button" aria-label="Open navigation menu" className="lg:hidden mr-3 text-2xl" onClick={handleOpen}>
       {open ? <FaTimes /> : <FaBars />}
     </button>
   </div>

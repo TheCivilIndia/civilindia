@@ -10,12 +10,12 @@ const Team = ({id}) => {
   const renderSection = () => {
     const teamMembers = teamData[activeSection];
     return (
-      <div  className=" w-[90%] grid grid-cols-1 gap-10 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3">
+      <div  className=" w-[75%] grid grid-cols-1 gap-10 mt-8 xl:mt-16 md:grid-cols-2 xl:grid-cols-3">
       {teamMembers.map((member) => (
         <div className="flex flex-col items-center w-full border-3 border-transparent hover:border-blue-600 hover:shadow-lg hover:scale-105 cursor-pointer shadow-gray-400 bg-blue-100 pb-4 rounded-lg transition ease-in-out duration-200" key={member.id}>
     
         <img
-          className=" w-full rounded-lg aspect-square"
+          className=" w-full rounded-lg aspect-[0.91]"
           src={member.image}
           alt={member.name}
         />

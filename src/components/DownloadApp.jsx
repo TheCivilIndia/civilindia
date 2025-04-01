@@ -19,16 +19,16 @@ const DownloadApp = () => {
         <h2 className=' text-[#1C1C1B] font-bold text-3xl md:text-4xl lg:text-5xl mt-2'>Online learning now in your
         fingertips</h2>
         <div className='w-full flex flex-row gap-8 flex-wrap mt-11 justify-center sm:justify-normal'>
-        <button className=' bg-[#ffffff] rounded-md px-2 hover:drop-shadow-md hover:cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out'>
-        <img src={appstore}>
+        <a aria-label='Download app from app store'  className=' bg-[#ffffff] rounded-md px-2 hover:drop-shadow-md hover:cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out'>
+        <img src={appstore} alt='app-store-link'>
 
         </img>
 
-        </button>
+        </a>
         <a href="https://play.google.com/store/apps/details?id=com.civil.india.official&hl=en-US" 
   target="_blank" 
-  rel="noopener noreferrer" className=' bg-[#ffffff] rounded-md px-2  hover:drop-shadow-md hover:cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out'>
-        <img src={playstore}>
+  rel="noopener noreferrer" aria-label='Download app from play store' className=' bg-[#ffffff] rounded-md px-2  hover:drop-shadow-md hover:cursor-pointer hover:scale-105 transition-all duration-200 ease-in-out'>
+        <img src={playstore} alt='play-store-link'>
 
         </img>
 
