@@ -148,16 +148,16 @@ export function Navbar() {
       
         </ul>
         <div className="hidden gap-3 lg:flex lg:items-center">
-          <a href="https://www.youtube.com/@thecivilindiakanpur8682" target="_blank">
+          <a href="https://www.youtube.com/@thecivilindiakanpur8682" target="_blank" aria-label='Youtube Link'>
             <FaYoutube className={`text-xl ${isScrolling || !isHomePage ? "text-black" : "text-white"}`} />
           </a>
-          <a href="https://www.facebook.com/profile.php?id=100069365156747" target="_blank">
+          <a href="https://www.facebook.com/profile.php?id=100069365156747" target="_blank" aria-label='facebook Link'>
             <FaFacebook className={`text-xl ${isScrolling || !isHomePage ? "text-black" : "text-white"}`} />
           </a>
-          <a href="https://www.instagram.com/thecivilindia/?utm_medium=copy_link" target="_blank">
+          <a href="https://www.instagram.com/thecivilindia/?utm_medium=copy_link" target="_blank" aria-label='Instagram Link'>
             <FaInstagram className={`text-xl ${isScrolling || !isHomePage ? "text-black" : "text-white"}`} />
           </a>
-          <a href="https://t.me/thecivilindiakanpur" target="_blank">
+          <a href="https://t.me/thecivilindiakanpur" target="_blank" aria-label='Telegram Link'>
             <FaTelegram className={`text-xl ${isScrolling || !isHomePage ? "text-black" : "text-white"}`} />
           </a>
           <Link to="/signup">

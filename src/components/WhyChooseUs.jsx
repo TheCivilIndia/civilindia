@@ -353,7 +353,7 @@ const WhyChooseUs = () => {
             })}
           </div>
           <div className="w-full hidden lg:block overflow-hidden lg:w-[50%] lg:h-auto my-2 rounded-2xl">
-          <img src={whychoose} className="w-full object-cover">
+          <img src={whychoose} alt="whyChooseUs" className="w-full object-cover">
 
 </img>
           </div>

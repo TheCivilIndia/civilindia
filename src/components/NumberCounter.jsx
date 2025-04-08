@@ -82,7 +82,7 @@ const NumberCounter = () => {
           <p className="text-2xl md:text-3xl font-bold text-[#FFFFFF] ">
             <CountUp
               start={0}
-              end={898}
+              end={25}
               duration={3}
               enableScrollSpy={true}
               scrollSpyOnce={true}
@@ -93,8 +93,8 @@ const NumberCounter = () => {
         <div className="flex flex-col items-center justify-center  my-8">
           <p className="text-2xl md:text-3xl font-bold text-[#FFFFFF]">
             <CountUp
-            start={5000}
-              end={20000}
+            start={10}
+              end={300}
               separator=","
               suffix="+"
               duration={3}
@@ -107,8 +107,8 @@ const NumberCounter = () => {
         <div className="flex flex-col items-center justify-center my-8">
           <p className=" text-2xl md:text-3xl font-bold text-[#FFFFFF]">
             <CountUp
-            start={90}
-              end={298}
+            start={0}
+              end={25}
               duration={3}
               enableScrollSpy={true}
               scrollSpyOnce={true}
@@ -119,8 +119,8 @@ const NumberCounter = () => {
         <div className="flex flex-col items-center justify-center my-8">
           <p className="text-2xl md:text-3xl font-bold text-[#FFFFFF]">
             <CountUp
-            start={55000}
-              end={72878}
+            start={100}
+              end={1000}
               separator=","
               suffix="+"
               duration={3}

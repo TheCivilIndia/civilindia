@@ -64,7 +64,7 @@ const Footer = () => {
               The Civil India
             </Link>
             <p className="text-white mb-3 font-normal text-lg">
-            9C-Z Shree Jee Complex, Sachan Guest House Chauraha,<br></br> Barra Kanpur,<br></br> 208006
+            9C-Z Shree Jee Complex, Sachan Guest House Chauraha,<br></br> Barra Kanpur,<br></br> 208027
             </p>
             <p className="text-white mb-3 font-normal text-lg">
             Contact : 9451395056, 9336060185

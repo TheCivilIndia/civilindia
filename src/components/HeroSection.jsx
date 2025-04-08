@@ -301,7 +301,7 @@ const HeroSection = () => {
       image: image3,
       title: "Welcome to ",
       highlight: "The Civil India",
-      subtitle: "Your Pathway to Success in Civil Services Exams",
+      subtitle: "Your Pathway to Success in Government Exams",
       buttonText: "Play store",
       buttonLink: "https://play.google.com/store/apps/details?id=com.civil.india.official&hl=en-US"
     },
