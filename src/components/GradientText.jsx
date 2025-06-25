@@ -1,5 +1,5 @@
 import "./GradientText.css";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 export default function GradientText({
 children,
@@ -21,10 +21,10 @@ return (
 );
 }
 
-GradientText.propTypes = {
-    children: PropTypes.node.isRequired,
-    className: PropTypes.string,
-    colors: PropTypes.arrayOf(PropTypes.string),
-    animationSpeed: PropTypes.number,
-    showBorder: PropTypes.bool,
-  };
+// GradientText.propTypes = {
+//     children: PropTypes.node.isRequired,
+//     className: PropTypes.string,
+//     colors: PropTypes.arrayOf(PropTypes.string),
+//     animationSpeed: PropTypes.number,
+//     showBorder: PropTypes.bool,
+//   };
