@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import SignupPage from './pages/SignupPage';
-import SSCStenographerPage from './pages/ssc/stanographerexam';
+import SSCStenographerPage from './pages/ssc/Stanographerexam';
 import BankExamPage from './pages/ssc/BankExams';
 import SSCMTSPage from './pages/ssc/SscMtsExam';
 import SSCGDPage from './pages/ssc/SSCGdPage';
