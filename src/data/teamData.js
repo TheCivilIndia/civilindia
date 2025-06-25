@@ -12,44 +12,59 @@ const teamData = {
       id: 1, 
       name: "Aditya Sir", 
       role: "Faculty - GS and GK", 
-      image: AdityaSir 
+      image: AdityaSir,
+       educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
+      teachingExperience: "12+ years in primary and secondary education"
     },
     { 
       id: 2, 
       name: "Gyanendra Sir", 
       role: "Faculty - Hindi", 
-      image: GyanendraSir 
+      image: GyanendraSir ,
+      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
+      teachingExperience: "12+ years in primary and secondary education"
+
     },
     { 
       id: 3, 
       name: "Naveen Sir", 
       role: "Faculty - Reasoning", 
-      image: NaveenSir
+      image: NaveenSir,
+      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
+      teachingExperience: "12+ years in primary and secondary education"
     },
 
     { 
       id: 4, 
       name: "Sandeep Sir", 
       role: "Faculty - English", 
-      image: SandeepSir
+      image: SandeepSir ,
+      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
+      teachingExperience: "12+ years in primary and secondary education"
     },
     { 
       id: 5, 
       name: "Sudhir Sir", 
       role: "Faculty - Maths", 
-      image: SudhirSir
+      image: SudhirSir ,
+      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
+      teachingExperience: "12+ years in primary and secondary education"
     },
     { 
       id: 6, 
       name: "Vivek Sir", 
       role: "Faculty - GS and GK", 
-      image: VivekSir
+      image: VivekSir ,
+      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
+      teachingExperience: "12+ years in primary and secondary education"
     },
     { 
       id: 7, 
       name: "Abhishek Sir", 
       role: "Faculty - GS, GK and Science", 
-      image: AbhishekSir
+      image: AbhishekSir ,
+      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
+      teachingExperience: "12+ years in primary and secondary education"
     },
   ],
 

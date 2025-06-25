@@ -9,14 +9,14 @@ const Coursecards = ({ course }) => {
 
   return (
     <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg w-[350px] relative hover:scale-105 ease-in-out">
-      <img alt={title} src={image} className=" w-full aspect-[1.78]" />
+      <img alt={title} src={image} className="h-56 w-full object-fill" />
       <span className="px-[0.30rem] rounded-sm text-white text-[0.75rem] font-semibold uppercase bg-blue-900 absolute top-2 right-2 z-40">
         New
       </span>
 
       <div className="bg-white p-4 sm:p-6">
         <a href="#">
-          <p className="mt-0.5 text-lg font-semibold text-gray-900">{title}</p>
+          <h3 className="mt-0.5 text-lg font-semibold text-gray-900">{title}</h3>
         </a>
         <p className="mt-2 line-clamp-2 text-sm/relaxed text-gray-500">
         {desc}
