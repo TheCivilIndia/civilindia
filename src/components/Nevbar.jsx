@@ -128,7 +128,7 @@ function NavItem({ href = "#", children, isScrolling, isHomePage, isMobile, onCl
         </button>
         {dropdownOpen && (
           <ul 
-            className="absolute left-0 top-full py-2 bg-white rounded-lg shadow-lg min-w-[150px] z-50"
+            className="absolute -left-10 top-full py-2 bg-white rounded-lg shadow-lg min-w-[150px] z-50"
             onMouseEnter={() => !isMobile && setIsSubmenuHovered(true)}
             onMouseLeave={() => !isMobile && setIsSubmenuHovered(false)}
           >
@@ -140,7 +140,7 @@ function NavItem({ href = "#", children, isScrolling, isHomePage, isMobile, onCl
           {item.title}
           <FaChevronRight className="ml-2" size={10} />
         </button>
-        <ul className="absolute top-0 left-full mt-0 ml-1 w-40 bg-white rounded-lg shadow-lg hidden group-hover:block z-50">
+        <ul className="absolute top-0 left-full mt-0 ml-[1px] w-40 bg-white rounded-lg shadow-lg hidden group-hover:block z-50">
           {item.submenu.map((subItem, subIndex) => (
             <li key={subIndex}>
               <Link
