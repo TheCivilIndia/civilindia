@@ -114,7 +114,6 @@ const Home = () => {
         <Team id="team"/>
         <Contact id="contact"/>
         {/* <BrandSlider/> */}
-        <Footer/>
     </div>
   )
 }
