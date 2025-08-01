@@ -103,7 +103,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="mt-8 w-full md:mt-0 md:w-auto">
-            <h6 className="text-white mb-3">Get the app</h6>
+            <p className="text-white mb-3">Get the app</p>
             <div className="flex flex-col gap-2">
               {/* <button className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg">
                 <img
@@ -114,14 +114,16 @@ const Footer = () => {
                 <FaApple />
                 App Store
               </button> */}
-              <button className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg hover:scale-105 hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out">
+              <a className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg hover:scale-105 hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out">
                 <FaApple className="mr-2 text-2xl" />
                 App Store
-              </button>
-              <button className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg hover:scale-105 hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.civil.india.official&hl=en-US" 
+  target="_blank" 
+  rel="noopener noreferrer" className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg hover:scale-105 hover:cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out">
                 <FaGooglePlay className="mr-2 text-2xl" />
                 Play Store
-              </button>
+              </a>
 
               {/* <button className="flex items-center justify-center bg-white text-black py-2 px-4 rounded-lg">
                 <img
@@ -143,7 +145,7 @@ const Footer = () => {
   
   {/* Second line - developer credit */}
   <span className="block md:inline md:ml-1">
-    <span className="hidden sm:inline"> | </span> 
+    <span className="hidden sm:inline"> | </span> {/* Show pipe only on desktop */}
     Developed by{" "}
     <a
       href="https://launchwebx.com"
@@ -165,16 +167,16 @@ const Footer = () => {
 
 
           <div className="flex gap-2">
-            <a href="https://www.youtube.com/@thecivilindiakanpur8682" target="_blank">
+            <a href="https://www.youtube.com/@thecivilindiakanpur8682" target="_blank" aria-label='Youtube link'  >
               <FaYoutube className="text-white text-2xl opacity-75" />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=100069365156747" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=100069365156747" target="_blank" aria-label='facebook link'  >
               <FaFacebook className="text-white text-2xl opacity-75" />
             </a>
-            <a href="https://www.instagram.com/thecivilindia/?utm_medium=copy_link" target="_blank">
+            <a href="https://www.instagram.com/thecivilindia/?utm_medium=copy_link" target="_blank" aria-label='instagram link'  >
               <FaInstagram className="text-white text-2xl opacity-75" />
             </a>
-            <a href="https://t.me/thecivilindiakanpur" target="_blank">
+            <a href="https://t.me/thecivilindiakanpur" target="_blank" aria-label='Telegram link'  >
               <FaTelegram className="text-white text-2xl opacity-75" />
             </a>
           </div>
