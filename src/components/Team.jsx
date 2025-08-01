@@ -15,7 +15,7 @@ const Team = ({id}) => {
         <div className="flex flex-col items-center w-full border-3 border-transparent hover:border-blue-600 hover:shadow-lg hover:scale-105 cursor-pointer shadow-gray-400 bg-blue-100 pb-4 rounded-lg transition ease-in-out duration-200" key={member.id}>
     
         <img
-          className=" w-full rounded-lg aspect-square"
+          className=" w-full rounded-lg aspect-[0.91]"
           src={member.image}
           alt={member.name}
         />
