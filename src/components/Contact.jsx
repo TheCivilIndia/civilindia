@@ -19,9 +19,9 @@ const Contact = () => {
                 <div className=' text-xl lg:text-2xl w-full flex justify-center lg:w-[40%] '>Let&apos;s request a A schedule for Free Consultation</div>
 
                 <div className='w-[80%] lg:w-[15%] flex justify-center lg:justify-end '>
-                    <button><div className=" w-full flex items-center gap-2 bg-blue-900 px-5 py-2 rounded-lg ">
+                    <button><a href="tel:+919451395056" className=" w-full flex items-center gap-2 bg-blue-900 px-5 py-2 rounded-lg cursor-pointer hover:scale-90 transition-all duration-500">
                 <MdAddCall/> Call Us
-                </div></button>
+                </a></button>
                 </div>
 
             </div>
