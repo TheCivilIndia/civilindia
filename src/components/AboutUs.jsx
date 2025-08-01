@@ -40,19 +40,21 @@ const AboutUs = ({ id }) => {
   const BannerData = {
     image: Img1,
     tag: "LEARN AT YOUR OWN PACE",
+    imgtxt: "Manoj Kumar, Director",
     title: "Personalized Learning Tailored to Your Schedule",
     subtitle:
       "The Civil India Institute has a golden history of success by giving more than 20,000 selections in various competitive examinations since the year 2006. With the help of its experienced and qualified teachers, the Institute has set new records every day by giving record selections in IAS, PCS, SSC, BANK, RAILWAY and other state level competitive examinations as well as in the examinations related to teacher recruitment (PGT, TGT, CTET, UPTET, SUPER TET, KVS, BPSC, DSSSB, etc.). Our aim is that with the efficient and capable guidance of the institute, the dream of all you students to get a government job' can come true.",
-    link: "#",
+    link: "/signup",
   };
 
   const BannerData2 = {
     image: Img2,
     tag: "SMART LEARNING, SMARTER SUCCESS!",
+    imgtxt: "Sudhir Rathore",
     title: "Revolutionizing Learning with High-Tech Classrooms",
     subtitle:
       "We have high-tech classrooms, It consists of Digital Board with a high-tech projector, By using newly arising technologies, the faculties can interact in a more influential way with the students which helps the students learn each concept of every subject perfectly. Apart from all the other facilities, we offer a unique blend of smart assessment through various methods such as Speed Tests, Class Work-Sheet, online classes, online mock tests with conceptual analysis because the selection oriented candidates require the selection oriented guidance.",
-    link: "#",
+    link: "/signup",
   };
 
   return (
