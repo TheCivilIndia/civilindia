@@ -19,10 +19,10 @@ const teamData = {
     { 
       id: 2, 
       name: "Gyanendra Sir", 
-      role: "Faculty - Hindi", 
+      role: "Faculty - Hindi, Sanskrit ", 
       image: GyanendraSir ,
-      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
-      teachingExperience: "12+ years in primary and secondary education"
+      educationalQualification: "M.A Hindi , M.A Sanskrit  B.Ed",
+      teachingExperience: "15+ years"
 
     },
     { 
@@ -30,8 +30,8 @@ const teamData = {
       name: "Naveen Sir", 
       role: "Faculty - Reasoning", 
       image: NaveenSir,
-      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
-      teachingExperience: "12+ years in primary and secondary education"
+      educationalQualification: "B.Sc and B.ed",
+      teachingExperience: "10+ years"
     },
 
     { 
@@ -39,32 +39,32 @@ const teamData = {
       name: "Sandeep Sir", 
       role: "Faculty - English", 
       image: SandeepSir ,
-      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
-      teachingExperience: "12+ years in primary and secondary education"
+      educationalQualification: "B.Sc and B.ed",
+      teachingExperience: "10+ years"
     },
     { 
       id: 5, 
       name: "Sudhir Sir", 
       role: "Faculty - Maths", 
       image: SudhirSir ,
-      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
-      teachingExperience: "12+ years in primary and secondary education"
+      educationalQualification: "B.Sc and B.ed",
+      teachingExperience: "12+ years"
     },
     { 
       id: 6, 
       name: "Vivek Sir", 
-      role: "Faculty - GS and GK", 
+      role: "Faculty - Polity, Economics, EVS", 
       image: VivekSir ,
-      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
-      teachingExperience: "12+ years in primary and secondary education"
+      educationalQualification: "BA; MA(Polity)",
+      teachingExperience: "13+ years"
     },
     { 
       id: 7, 
       name: "Abhishek Sir", 
-      role: "Faculty - GS, GK and Science", 
+      role: "Faculty - GS, GK", 
       image: AbhishekSir ,
-      educationalQualification: "D.El.Ed, B.Ed, M.Ed, Ph.D in Education",
-      teachingExperience: "12+ years in primary and secondary education"
+      educationalQualification: "M.A(History), B.ed, LLB ,NET (HISTORY) 2 TIMES",
+      teachingExperience: "6+ years"
     },
   ],
 
