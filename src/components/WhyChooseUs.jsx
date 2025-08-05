@@ -317,7 +317,7 @@ const WhyChooseUs = () => {
             Why Choose Us
           </h1>
           <p className="font-semibold text-2xl sm:text-3xl">
-            Benefits of online tutoring services with us
+            Benefits of online and offline services with us
           </p>
         </div>
 
