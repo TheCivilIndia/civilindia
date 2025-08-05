@@ -55,7 +55,7 @@ const Team = ({id}) => {
           Our Team
         </h1>
         <p className="max-w-4xl mx-auto my-6 text-center text-lg font-semibold tracking-wide ">
-        Our dedicated faculty brings expertise and innovation to every lesson, ensuring students receive top-quality education with interactive learning and personalized guidance for academic success.
+        Our dedicated faculty brings expertise and innovation to every lesson, ensuring students receive top-quality education with interactive learning and personalized guidance for competitive exams.
         </p>
 
     
