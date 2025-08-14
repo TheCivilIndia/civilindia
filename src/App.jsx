@@ -24,6 +24,10 @@ import CTETUPTETPage from './pages/teaching/CTETPage';
 import UPSCExamPage from './pages/UPSCExam';
 import Footer from './components/Footer';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import RRBALPExamPage from './pages/railway/RRBRailwayExam';
+import RPFConstableExamPage from './pages/railway/RPFConstableExam';
+import RPFSIExamPage from './pages/railway/RPFSIExamPage';
+import RRBGroupDExamPage from './pages/railway/RRBGroupDexamPage';
 
 
 
@@ -64,6 +68,10 @@ function App() {
           <Route path='/career/ssc/cpo-exam' element={<SSCCPOPage/>} />
           <Route path='/career/ssc/chsl-exam' element={<SSCCHSLPage/>} />
           <Route path='/career/ssc/je-exam' element={<SSCJEPage/>} />
+          <Route path='/career/railway/alp-exam' element={<RRBALPExamPage/>} />
+           <Route path='/career/railway/rpf-constable-exam' element={<RPFConstableExamPage/>} />
+           <Route path='/career/railway/rpf-si-exam' element={<RPFSIExamPage/>} />
+           <Route path='/career/railway/rrb-group-d-exam' element={<RRBGroupDExamPage/>} />
           <Route path='/career/bank' element={<BankExamPageAgain/>} />
           <Route path='/career/uppcs' element={<UPPCSExamPage/>} />
           <Route path='/career/teaching/up-super-tet' element={<UPSuperTETPage/>} />
