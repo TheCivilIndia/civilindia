@@ -28,6 +28,7 @@ import RRBALPExamPage from './pages/railway/RRBRailwayExam';
 import RPFConstableExamPage from './pages/railway/RPFConstableExam';
 import RPFSIExamPage from './pages/railway/RPFSIExamPage';
 import RRBGroupDExamPage from './pages/railway/RRBGroupDexamPage';
+import RRBNTPCExamPage from './pages/railway/RRBNtpcExam';
 
 
 
@@ -72,6 +73,7 @@ function App() {
            <Route path='/career/railway/rpf-constable-exam' element={<RPFConstableExamPage/>} />
            <Route path='/career/railway/rpf-si-exam' element={<RPFSIExamPage/>} />
            <Route path='/career/railway/rrb-group-d-exam' element={<RRBGroupDExamPage/>} />
+          <Route path='/career/railway/rrb-ntpc-exam' element={<RRBNTPCExamPage/>} />
           <Route path='/career/bank' element={<BankExamPageAgain/>} />
           <Route path='/career/uppcs' element={<UPPCSExamPage/>} />
           <Route path='/career/teaching/up-super-tet' element={<UPSuperTETPage/>} />
