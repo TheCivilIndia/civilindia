@@ -47,7 +47,8 @@ export const NavbarLinks = [
     { title: "RRB ALP Exam", path: "/career/railway/alp-exam" },
     { title: "RPF Constable Exam", path: "/career/railway/rpf-constable-exam" },
     { title: "RPF SI Exam", path: "/career/railway/rpf-si-exam" },
-    { title: "RRB Group D Exam", path: "/career/railway/rrb-group-d-exam" }
+    { title: "RRB Group D Exam", path: "/career/railway/rrb-group-d-exam" },
+    { title: "RRB NTPC Exam", path: "/career/railway/rrb-ntpc-exam" }
   ]
 },
       { title: "BANK", path: "/career/bank" },
@@ -479,6 +480,15 @@ export function Navbar() {
         onClick={() => setOpen(false)}
       >
         RRB Group D Exam
+      </Link>
+    </li>
+         <li>
+      <Link 
+        to="/career/railway/rrb-ntpc-exam" 
+        className="block text-black hover:text-blue-600" 
+        onClick={() => setOpen(false)}
+      >
+        RRB NTPC Exam
       </Link>
     </li>
       </ul>
