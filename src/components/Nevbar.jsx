@@ -40,6 +40,16 @@ export const NavbarLinks = [
           { title: "Bank Exams", path: "/career/ssc/bank-exams" }
         ]
       },
+       {
+  title: "Railway",
+  path: "#",
+  submenu: [
+    { title: "RRB ALP Exam", path: "/career/railway/alp-exam" },
+    { title: "RPF Constable Exam", path: "/career/railway/rpf-constable-exam" },
+    { title: "RPF SI Exam", path: "/career/railway/rpf-si-exam" },
+    { title: "RRB Group D Exam", path: "/career/railway/rrb-group-d-exam" }
+  ]
+},
       { title: "BANK", path: "/career/bank" },
       // { title: "UPSSSC", path: "/career/upsssc" },
       // { title: "UPP", path: "/career/upp" },
@@ -430,6 +440,47 @@ export function Navbar() {
         <li><Link to="/career/ssc/je-exam" className="block text-black hover:text-blue-600" onClick={() => setOpen(false)}>SSC JE</Link></li>
         <li><Link to="/career/ssc/stanographer-exam" className="block text-black hover:text-blue-600" onClick={() => setOpen(false)}>SSC Stenographer</Link></li>
         <li><Link to="/career/ssc/bank-exams" className="block text-black hover:text-blue-600" onClick={() => setOpen(false)}>Bank Exams</Link></li>
+      </ul>
+    </li>
+
+         <li>
+      <button 
+        className="flex items-center justify-between w-full text-black font-medium"
+        onClick={() => {
+          const sscSubmenu = document.getElementById('railway-submenu');
+          sscSubmenu.classList.toggle('hidden');
+        }}
+      >
+        Railway <FaChevronDown size={12} />
+      </button>
+      <ul id="railway-submenu" className="hidden pl-4 mt-2 space-y-2">
+        <li><Link to="/career/railway/alp-exam" className="block text-black hover:text-blue-600" onClick={() => setOpen(false)}>RRB ALP EXAM</Link></li>
+         <li><Link 
+        to="/career/railway/rpf-constable-exam" 
+        className="block text-black hover:text-blue-600" 
+        onClick={() => setOpen(false)}
+      >
+        RPF Constable Exam
+      </Link>
+    </li>
+    <li>
+      <Link 
+        to="/career/railway/rpf-si-exam" 
+        className="block text-black hover:text-blue-600" 
+        onClick={() => setOpen(false)}
+      >
+        RPF SI Exam
+      </Link>
+    </li>
+    <li>
+      <Link 
+        to="/career/railway/rrb-group-d-exam" 
+        className="block text-black hover:text-blue-600" 
+        onClick={() => setOpen(false)}
+      >
+        RRB Group D Exam
+      </Link>
+    </li>
       </ul>
     </li>
 
