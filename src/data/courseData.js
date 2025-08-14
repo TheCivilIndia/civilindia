@@ -5,6 +5,7 @@ import CTETJunior from "../assets/images/Course/CTETJunior.webp"
 import RRBGroupD from "../assets/images/Course/RRBGroupD.webp"
 import RRBNTPC from "../assets/images/Course/RRBNTPC.webp"
 import Sangharsh from "../assets/images/Course/Sangharsh.webp"
+import CHSLimage from "../assets/images/Course/sscchsl.webp"
 export const courses = [
     {
       id: 1,
@@ -30,8 +31,8 @@ export const courses = [
       id: 2,
       title: "SSC CGL Sangharsh Batch",
       category: "SSC & Other Exams",
-      price: 399,
-      originalPrice: 999,
+       price: 999,
+      originalPrice: 1200,
       image: Sangharsh,
       desc: "Prepare for SSC CGL 2025 with the संघर्ष बैच! 📚✨✔ Live Classes ✔ Mock Tests ✔ Class Notes PDF ✔ Expert Teachers & Doubt Support Enroll now for just ₹399",
       link: "https://thecivilindia.classx.co.in/courses/4-ssc-cgl-2025"
@@ -40,9 +41,9 @@ export const courses = [
       id: 5,
       title: "SSC CHSL Vijay Batch",
       category: "SSC & Other Exams",
-      price: 399,
+     price: 899,
       originalPrice: 999,
-      image: Sangharsh,
+      image: CHSLimage,
       desc: "Get ready for SSC CHSL 2025 with the विजय बैच! 🎯📚 ✔ Live Classes ✔ Mock Tests ✔ Class Notes PDF ✔ Expert Teachers & Doubt Support Limited Offer: ₹399",
       link: "https://thecivilindia.classx.co.in/courses/18-ssc-chsl-2025"
     },
