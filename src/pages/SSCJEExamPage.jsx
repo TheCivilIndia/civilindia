@@ -224,6 +224,8 @@ import { FaChevronDown, FaChevronUp, FaBookOpen, FaAward, FaClock } from 'react-
 import { FiFileText } from "react-icons/fi";
 import { SlCalender } from "react-icons/sl";
 import Footer from '../components/Footer';
+import { Helmet } from "react-helmet-async"; 
+
 
 const SSCJEExamPage = () => {
   const [openSection, setOpenSection] = useState('overview');
@@ -233,6 +235,56 @@ const SSCJEExamPage = () => {
   };
 
   return (
+                   <>
+      <Helmet>
+        {/* Primary Title & Description */}
+        <title>SSC JE Exam & Coaching in Kanpur | Civil India</title>
+        <meta
+          name="description"
+          content="Prepare for SSC JE 2025 with Civil India in Kanpur. Coaching in Civil, Electrical & Mechanical with best faculty, complete syllabus coverage, mock tests & high selection rate."
+        />
+        
+        {/* Keywords */}
+        <meta
+          name="keywords"
+          content="SSC JE Coaching in Kanpur, SSC JE exam pattern, SSC JE syllabus, best SSC JE institute Kanpur, SSC Junior Engineer preparation"
+        />
+        
+        {/* Canonical URL */}
+        <link
+          rel="canonical"
+          href="https://www.thecivilindia.in/career/ssc/je-exam"
+        />
+        
+        {/* Open Graph for social sharing */}
+        <meta property="og:title" content="SSC JE Coaching in Kanpur | Civil India" />
+        <meta
+          property="og:description"
+          content="Civil India offers expert SSC JE coaching in Kanpur for Civil, Electrical, Mechanical disciplines. Complete exam guidance & proven results."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://www.thecivilindia.in/career/ssc/je-exam"
+        />
+        <meta
+          property="og:image"
+          content="https://www.thecivilindia.in/images/ssc-je-banner.jpg"
+        />
+        <meta property="og:site_name" content="The Civil India" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SSC JE Coaching in Kanpur | Civil India" />
+        <meta
+          name="twitter:description"
+          content="Join Civil India's SSC JE program: Best faculty, mock tests, full syllabus, in Kanpur."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.thecivilindia.in/images/ssc-je-banner.jpg"
+        />
+      </Helmet>
     <div className="min-h-screen bg-gray-50 mt-16">
       {/* Hero Banner */}
       <header className="bg-[#0f256e] text-white py-12 md:py-20">
@@ -411,6 +463,7 @@ const SSCJEExamPage = () => {
       {/* Footer */}
       <Footer/>
     </div>
+  </>
   );
 };
 
