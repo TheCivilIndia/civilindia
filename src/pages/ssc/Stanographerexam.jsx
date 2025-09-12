@@ -14,6 +14,7 @@ import {
   FaBullseye,
   FaCheckCircle
 } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 import Footer from '../../components/Footer';
 
 const SSCStenographerPage = () => {
@@ -61,9 +62,41 @@ const SSCStenographerPage = () => {
     { grade: "Grade C", salary: "₹51,000", description: "In-hand salary per month (approximately)" },
     { grade: "Grade D", salary: "₹36,000", description: "In-hand salary per month (approximately)" }
   ];
-
+const keywords = "SSC Stenographer coaching Kanpur, SSC Stenographer 2025 syllabus, SSC Steno Grade C D exam, SSC Stenographer eligibility, SSC Stenographer salary, government stenographer preparation";
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+         <Helmet>
+        <title>SSC Stenographer Exam 2025 Coaching | Civil India Kanpur</title>
+        <meta
+          name="description"
+          content="Prepare for SSC Stenographer Exam 2025 with Civil India, Kanpur’s best coaching institute. Expert faculty, syllabus coverage, eligibility details, salary structure, and official SSC updates."
+        />
+        <meta name="keywords" content={keywords} />
+        <link
+          rel="canonical"
+          href="https://www.thecivilindia.in/career/ssc/stenographer-exam"
+        />
+
+        {/* Open Graph (Facebook/LinkedIn) */}
+        <meta property="og:title" content="SSC Stenographer Exam 2025 Coaching | Civil India" />
+        <meta
+          property="og:description"
+          content="Join Civil India, the top SSC coaching institute in Kanpur, for SSC Stenographer Grade C & D exam preparation. Complete syllabus, salary details & expert guidance."
+        />
+        <meta property="og:url" content="https://www.thecivilindia.in/career/ssc/stenographer-exam" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="The Civil India" />
+        <meta property="og:image" content="https://www.thecivilindia.in/images/ssc-steno-banner.jpg" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SSC Stenographer Coaching 2025 | Civil India Kanpur" />
+        <meta
+          name="twitter:description"
+          content="SSC Stenographer Grade C & D Exam 2025 coaching in Kanpur. Learn from expert faculty at Civil India."
+        />
+        <meta name="twitter:image" content="https://www.thecivilindia.in/images/ssc-steno-banner.jpg" />
+      </Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
