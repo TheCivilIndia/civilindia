@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
   FaChevronDown,
   FaChevronUp,
@@ -118,6 +119,115 @@ const SSCCPOPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+           <Helmet>
+  {/* Primary Meta Tags */}
+  <title>SSC CPO Exam 2025 Coaching | Eligibility, Pattern & Preparation Guide</title>
+  <meta
+    name="description"
+    content="Prepare for SSC CPO Exam 2025 with expert guidance. Get details on eligibility, selection process, exam pattern, PET/PST, medical test, syllabus, and career opportunities in Delhi Police & CAPFs."
+  />
+  <meta
+    name="keywords"
+    content="SSC CPO exam 2025, SSC CPO coaching, SSC CPO eligibility, SSC CPO syllabus, SSC CPO selection process, SSC CPO paper pattern, Delhi Police SI exam, CAPF Sub Inspector exam, SSC CPO preparation"
+  />
+  <link
+    rel="canonical"
+    href="https://www.thecivilindia.in/career/ssc/cpo-exam"
+  />
+
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="SSC CPO Exam 2025 Coaching | Eligibility, Pattern & Preparation Guide"
+  />
+  <meta
+    property="og:description"
+    content="Comprehensive guide to SSC CPO Exam 2025 - Eligibility, Selection Process, Exam Pattern, PET/PST, Medical Tests & Career in Delhi Police and CAPFs."
+  />
+  <meta
+    property="og:url"
+    content="https://www.thecivilindia.in/career/ssc/cpo-exam"
+  />
+  <meta
+    property="og:image"
+    content="https://www.thecivilindia.in/images/ssc-cpo-banner.jpg"
+  />
+  <meta property="og:site_name" content="Civil India" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="SSC CPO Exam 2025 | Eligibility, Syllabus & Preparation"
+  />
+  <meta
+    name="twitter:description"
+    content="Get expert SSC CPO 2025 preparation tips. Learn about eligibility, exam pattern, PET/PST, medical test & career opportunities in Delhi Police & CAPFs."
+  />
+  <meta
+    name="twitter:image"
+    content="https://www.thecivilindia.in/images/ssc-cpo-banner.jpg"
+  />
+  <meta name="twitter:site" content="@CivilIndia" />
+
+  {/* Structured Data: Course Schema */}
+  <script type="application/ld+json">{`
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "SSC CPO Exam Coaching 2025",
+    "description": "Civil India provides expert coaching and preparation for SSC CPO Exam 2025, covering eligibility, exam pattern, PET/PST, medical test, and syllabus.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Civil India",
+      "url": "https://www.thecivilindia.in"
+    }
+  }
+  `}</script>
+
+  {/* Structured Data: FAQ Schema */}
+  <script type="application/ld+json">{`
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the SSC CPO Exam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The SSC CPO (Central Police Organization) Exam is conducted for recruitment of Sub-Inspectors in Delhi Police and various CAPFs like BSF, CISF, CRPF, ITBP, and SSB."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the eligibility for SSC CPO 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Candidates must hold a bachelor's degree, be aged 20-25 years, and meet physical and medical standards set by the respective forces."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the selection process for SSC CPO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The selection process includes Paper I, Physical Endurance/Standard Test (PET/PST), Paper II, and a detailed medical examination."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which forces recruit through SSC CPO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Forces include Delhi Police, BSF, CISF, CRPF, ITBP, and SSB."
+        }
+      }
+    ]
+  }
+  `}</script>
+</Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
