@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   FaChevronDown,
   FaChevronUp,
@@ -22,6 +23,21 @@ const SSCMTSPage = () => {
         : [...prev, section]
     );
   };
+
+    // ===================
+  // SEO Data
+  // ===================
+  const seo = {
+    title:
+      "SSC MTS Exam 2025 | Eligibility, Syllabus, Pattern & Job Roles | Civil India",
+    description:
+      "Get complete details about SSC MTS Exam 2025 including eligibility, syllabus, exam pattern, job roles, selection process and key highlights. Start your SSC MTS preparation with Civil India.",
+    url: "https://www.thecivilindia.in/career/ssc/mts-exam",
+    keywords:
+      "SSC MTS Exam 2025, SSC Multitasking Staff, SSC MTS eligibility, SSC MTS syllabus, SSC MTS exam pattern, SSC MTS job roles, SSC coaching Kanpur",
+    image: "https://www.thecivilindia.in/images/ssc-mts-banner.jpg",
+  };
+
 
   const examStages = [
     {
@@ -71,6 +87,25 @@ const SSCMTSPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+          <Helmet>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.description} />
+        <meta name="keywords" content={seo.keywords} />
+        <link rel="canonical" href={seo.url} />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
+        <meta property="og:image" content={seo.image} />
+        <meta property="og:url" content={seo.url} />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={seo.title} />
+        <meta name="twitter:description" content={seo.description} />
+        <meta name="twitter:image" content={seo.image} />
+      </Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
