@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   FaChevronDown,
   FaChevronUp,
@@ -175,6 +176,53 @@ const SSCCGLPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+      {/* ✅ SEO Helmet */}
+      <Helmet>
+        <title>SSC CGL Exam 2025 Coaching | Civil India Kanpur</title>
+        <meta
+          name="description"
+          content="Join Civil India, Kanpur’s best SSC CGL coaching institute for 2025. Get expert guidance, syllabus coverage, eligibility details, salary info, and preparation for SSC CGL Tier I & Tier II exams."
+        />
+        <meta
+          name="keywords"
+          content="SSC CGL 2025 coaching Kanpur, SSC CGL syllabus, SSC CGL eligibility, SSC CGL salary, SSC CGL preparation, SSC CGL Tier 1, SSC CGL Tier 2, SSC coaching Kanpur, SSC CGL posts"
+        />
+        <link rel="canonical" href="https://www.thecivilindia.in/career/ssc/cgl-exam" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="SSC CGL Coaching 2025 | Civil India Kanpur" />
+        <meta
+          property="og:description"
+          content="Civil India offers expert SSC CGL coaching in Kanpur. Covers Tier I & II syllabus, eligibility, salary, posts, and government job guidance."
+        />
+        <meta property="og:url" content="https://www.thecivilindia.in/career/ssc/cgl-exam" />
+        <meta property="og:image" content="https://www.thecivilindia.in/images/ssc-cgl-banner.jpg" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SSC CGL Exam 2025 Coaching | Civil India" />
+        <meta
+          name="twitter:description"
+          content="Prepare for SSC CGL 2025 with Civil India. Expert coaching, complete syllabus, posts, salary, and eligibility details."
+        />
+        <meta name="twitter:image" content="https://www.thecivilindia.in/images/ssc-cgl-banner.jpg" />
+
+        {/* ✅ Structured Data */}
+        <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "Course",
+          "name": "SSC CGL Exam Coaching 2025",
+          "description": "Civil India offers SSC CGL coaching in Kanpur with full coverage of Tier I & Tier II exams, eligibility, syllabus, posts, and preparation strategies.",
+          "provider": {
+            "@type": "EducationalOrganization",
+            "name": "Civil India",
+            "url": "https://www.thecivilindia.in"
+          }
+        }
+        `}</script>
+      </Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
