@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   FaChevronDown,
   FaChevronUp,
@@ -99,6 +100,85 @@ const SSCGDPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+       <Helmet>
+  <title>SSC GD Constable Exam 2025 | Eligibility, Syllabus, Pattern & Selection</title>
+  <meta
+    name="description"
+    content="Prepare for SSC GD Constable Exam 2025 with Civil India. Get complete details on eligibility, syllabus, exam pattern, physical tests, and selection process for CAPFs, SSF, Assam Rifles, and NCB."
+  />
+  <meta
+    name="keywords"
+    content="SSC GD Constable exam 2025, SSC GD syllabus, SSC GD eligibility, SSC GD exam pattern, SSC GD physical test, SSC GD selection process, CAPF constable exam"
+  />
+  <link rel="canonical" href="https://www.thecivilindia.in/career/ssc/gd-constable-exam" />
+
+  {/* Open Graph */}
+  <meta property="og:title" content="SSC GD Constable Exam 2025 | Civil India" />
+  <meta
+    property="og:description"
+    content="Join Civil India for SSC GD Constable 2025 preparation. Learn eligibility, syllabus, exam stages, physical test details, and selection process."
+  />
+  <meta property="og:image" content="https://www.thecivilindia.in/images/ssc-gd-banner.jpg" />
+  <meta property="og:url" content="https://www.thecivilindia.in/career/ssc/gd-constable-exam" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SSC GD Constable Exam 2025 | Eligibility, Syllabus & Selection" />
+  <meta
+    name="twitter:description"
+    content="SSC GD Constable 2025 exam guide: eligibility, syllabus, exam pattern, physical tests & job opportunities with CAPFs, SSF, Assam Rifles & NCB."
+  />
+  <meta name="twitter:image" content="https://www.thecivilindia.in/images/ssc-gd-banner.jpg" />
+
+  {/* Structured Data */}
+  <script type="application/ld+json">{`
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "SSC GD Constable Exam 2025 Preparation",
+    "description": "Civil India provides expert guidance for SSC GD Constable exam including syllabus, eligibility, pattern, and physical tests.",
+    "provider": {
+      "@type": "Organization",
+      "name": "The Civil India",
+      "url": "https://www.thecivilindia.in"
+    }
+  }
+  `}</script>
+
+  <script type="application/ld+json">{`
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the eligibility for SSC GD Constable 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Candidates must have passed Class 10 from a recognized board. Age should be 18–23 years with relaxation for reserved categories."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the SSC GD Constable exam pattern?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The exam includes 80 questions for 160 marks across Reasoning, GK, Maths, and English/Hindi in 60 minutes, followed by PET, PST, and medical test."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which forces recruit through SSC GD Constable exam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SSC GD Constable recruits for CAPFs, SSF, Assam Rifles, and Narcotics Control Bureau."
+        }
+      }
+    ]
+  }
+  `}</script>
+</Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
