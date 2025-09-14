@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   FaChevronDown,
   FaChevronUp,
@@ -146,6 +147,73 @@ const RPFSIExamPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+          <Helmet>
+  {/* Primary Meta Tags */}
+  <title>RPF SI Exam 2025 Coaching | Eligibility, Syllabus, Salary & Pattern</title>
+  <meta
+    name="description"
+    content="Prepare for RPF SI Exam 2025 with expert guidance. Get complete details on eligibility, syllabus, exam pattern, physical requirements, salary, and benefits for Railway Protection Force Sub-Inspector recruitment."
+  />
+  <meta
+    name="keywords"
+    content="RPF SI coaching, RPF Sub Inspector exam 2025, RPF SI syllabus, RPF SI eligibility, RPF SI salary, RPF SI PET PMT, RPF SI preparation, RPF SI exam pattern"
+  />
+  <link
+    rel="canonical"
+    href="https://www.thecivilindia.in/career/railway/rpf-si-exam"
+  />
+
+  {/* Open Graph / Facebook */}
+  <meta property="og:title" content="RPF SI Exam 2025 | Eligibility, Syllabus & Salary" />
+  <meta
+    property="og:description"
+    content="Get complete information about RPF SI Exam 2025 – eligibility criteria, syllabus, physical standards, exam pattern, salary & benefits. Start your preparation today."
+  />
+  <meta
+    property="og:url"
+    content="https://www.thecivilindia.in/career/railway/rpf-si-exam"
+  />
+  <meta
+    property="og:image"
+    content="https://www.thecivilindia.in/images/rpf-si-banner.jpg"
+  />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="RPF SI Exam 2025 | Civil India Preparation Guide"
+  />
+  <meta
+    name="twitter:description"
+    content="RPF SI Exam 2025 coaching – eligibility, syllabus, exam stages (CBT, PET, PMT), salary, and benefits explained."
+  />
+  <meta
+    name="twitter:image"
+    content="https://www.thecivilindia.in/images/rpf-si-banner.jpg"
+  />
+
+  {/* ✅ Structured Data (Schema.org) */}
+  <script type="application/ld+json">{`
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "RPF SI Exam Coaching 2025",
+    "description": "Comprehensive RPF Sub-Inspector exam coaching with syllabus coverage, eligibility details, physical standards, exam stages, salary, and career guidance.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Civil India",
+      "url": "https://www.thecivilindia.in"
+    },
+    "educationalCredentialAwarded": "Sub-Inspector (Level 6, RPF/RPSF)",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Graduates preparing for RPF SI recruitment exam"
+    }
+  }
+  `}</script>
+</Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
@@ -557,5 +625,6 @@ const RPFSIExamPage = () => {
     </div>
   );
 };
+
 
 export default RPFSIExamPage;
