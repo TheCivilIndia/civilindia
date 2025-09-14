@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   FaChevronDown,
   FaChevronUp,
@@ -120,6 +121,57 @@ const RPFConstableExamPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+       <Helmet>
+  <title>RPF Constable Exam 2025 | Eligibility, Syllabus, Salary & Pattern</title>
+  <meta
+    name="description"
+    content="Prepare for RPF Constable Exam 2025 with complete details on eligibility, syllabus, CBT pattern, PET/PMT requirements, salary, benefits & selection process."
+  />
+  <meta
+    name="keywords"
+    content="RPF Constable Exam 2025, RPF Constable syllabus, RPF constable eligibility, RPF constable salary, RPF constable physical test, RPF constable pattern, Railway Constable recruitment, RPF constable 2025 notification"
+  />
+  <link rel="canonical" href="https://www.thecivilindia.in/career/rpf/constable-exam" />
+
+  {/* Open Graph (Facebook & LinkedIn) */}
+  <meta property="og:title" content="RPF Constable Exam 2025 | Civil India" />
+  <meta
+    property="og:description"
+    content="Get expert guidance for RPF Constable Exam 2025. Check eligibility, exam syllabus, salary, CBT, PET & PMT details. Start preparing with Civil India."
+  />
+  <meta property="og:url" content="https://www.thecivilindia.in/career/rpf/constable-exam" />
+  <meta property="og:image" content="https://www.thecivilindia.in/images/rpf-constable-banner.jpg" />
+  <meta property="og:type" content="website" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RPF Constable Exam 2025 | Eligibility, Syllabus, Salary" />
+  <meta
+    name="twitter:description"
+    content="Know all about RPF Constable Exam 2025: Eligibility, Syllabus, CBT, PET/PMT, Salary & Benefits. Prepare with Civil India."
+  />
+  <meta name="twitter:image" content="https://www.thecivilindia.in/images/rpf-constable-banner.jpg" />
+
+  {/* ✅ Structured Data for SEO */}
+  <script type="application/ld+json">{`
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "RPF Constable Exam Coaching 2025",
+    "description": "Civil India offers RPF Constable exam preparation with full details on eligibility, syllabus, CBT exam, PET, PMT, salary, and recruitment process.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Civil India",
+      "url": "https://www.thecivilindia.in"
+    },
+    "educationalLevel": "High School",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Aspiring Railway Protection Force Constables"
+    }
+  }
+  `}</script>
+</Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
@@ -496,5 +548,6 @@ const RPFConstableExamPage = () => {
     </div>
   );
 };
+
 
 export default RPFConstableExamPage;
