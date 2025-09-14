@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   FaChevronDown,
   FaChevronUp,
@@ -139,6 +140,59 @@ const RRBGroupDExamPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+          <Helmet>
+  {/* ✅ Page Title */}
+  <title>RRB Group D Exam 2025 | Eligibility, Syllabus, Pattern & Coaching in Kanpur</title>
+
+  {/* ✅ Meta Description */}
+  <meta
+    name="description"
+    content="Prepare for RRB Group D Exam 2025 with Civil India, Kanpur’s top railway coaching. Get complete syllabus, eligibility, PET details, salary, job profiles, and exam pattern."
+  />
+
+  {/* ✅ Keywords */}
+  <meta
+    name="keywords"
+    content="RRB Group D 2025, RRB Group D coaching Kanpur, RRB Group D syllabus, RRB Group D eligibility, Railway Group D PET, RRB Group D salary, RRB Group D exam pattern, Railway Recruitment Board Group D exam"
+  />
+
+  {/* ✅ Canonical URL */}
+  <link rel="canonical" href="https://www.thecivilindia.in/career/railway/rrb-group-d-exam" />
+
+  {/* ✅ Open Graph (for Facebook, LinkedIn) */}
+  <meta property="og:title" content="RRB Group D Exam 2025 | Civil India Kanpur" />
+  <meta
+    property="og:description"
+    content="Join Civil India for RRB Group D Exam 2025 preparation in Kanpur. Complete syllabus, eligibility, physical test details, salary, and job profiles explained."
+  />
+  <meta property="og:url" content="https://www.thecivilindia.in/career/railway/rrb-group-d-exam" />
+  <meta property="og:image" content="https://www.thecivilindia.in/images/rrb-group-d-banner.jpg" />
+  <meta property="og:type" content="website" />
+
+  {/* ✅ Twitter Cards */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RRB Group D Exam 2025 | Civil India" />
+  <meta name="twitter:description" content="RRB Group D 2025 exam details - syllabus, eligibility, PET, job profiles & coaching in Kanpur." />
+  <meta name="twitter:image" content="https://www.thecivilindia.in/images/rrb-group-d-banner.jpg" />
+
+  {/* ✅ Structured Data for SEO */}
+  <script type="application/ld+json">{`
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "RRB Group D Exam Coaching 2025",
+    "description": "Civil India provides expert coaching for RRB Group D Exam 2025 in Kanpur. Includes CBT syllabus, PET test, eligibility, salary details, and job profiles.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Civil India",
+      "url": "https://www.thecivilindia.in",
+      "logo": "https://www.thecivilindia.in/images/logo.png"
+    },
+    "courseMode": "Offline/Online",
+    "educationalCredentialAwarded": "RRB Group D Exam Preparation Certificate"
+  }
+  `}</script>
+</Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
@@ -530,5 +584,6 @@ const RRBGroupDExamPage = () => {
     </div>
   );
 };
+
 
 export default RRBGroupDExamPage;
