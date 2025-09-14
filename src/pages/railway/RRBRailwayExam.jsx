@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   FaChevronDown,
   FaChevronUp,
@@ -137,6 +138,69 @@ const RRBALPExamPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+          <Helmet>
+  {/* Primary Meta Tags */}
+  <title>RRB ALP Exam 2025 Coaching | Railway Assistant Loco Pilot Syllabus, Salary, Eligibility</title>
+  <meta
+    name="description"
+    content="Prepare for RRB ALP (Assistant Loco Pilot) Exam 2025 with Civil India. Get complete syllabus, eligibility criteria, exam pattern, salary details, and preparation strategy for CBT 1, CBT 2 & CBAT stages."
+  />
+  <meta
+    name="keywords"
+    content="RRB ALP exam 2025, RRB ALP coaching Kanpur, Railway Assistant Loco Pilot syllabus, RRB ALP salary, RRB ALP eligibility, RRB ALP CBT 1 syllabus, RRB ALP CBT 2 exam pattern, RRB ALP psychometric test, railway jobs 2025"
+  />
+  <meta name="author" content="Civil India" />
+  <link rel="canonical" href="https://www.thecivilindia.in/career/railway/rrb-alp-exam" />
+
+  {/* Open Graph / Facebook */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RRB ALP Exam 2025 | Railway Assistant Loco Pilot Coaching & Syllabus" />
+  <meta
+    property="og:description"
+    content="Join Civil India for the best RRB ALP (Assistant Loco Pilot) coaching in Kanpur. Learn syllabus, eligibility, salary & exam pattern for CBT 1, CBT 2 & CBAT."
+  />
+  <meta property="og:url" content="https://www.thecivilindia.in/career/railway/rrb-alp-exam" />
+  <meta property="og:image" content="https://www.thecivilindia.in/images/rrb-alp-banner.jpg" />
+  <meta property="og:site_name" content="Civil India Coaching" />
+
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RRB ALP Exam 2025 Coaching | Civil India" />
+  <meta
+    name="twitter:description"
+    content="Civil India offers expert RRB ALP coaching with complete syllabus, exam stages, salary details, eligibility & preparation guidance."
+  />
+  <meta name="twitter:image" content="https://www.thecivilindia.in/images/rrb-alp-banner.jpg" />
+
+  {/* ✅ Structured Data (Schema.org) */}
+  <script type="application/ld+json">{`
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "RRB ALP Exam Coaching 2025",
+    "description": "Civil India provides expert coaching for Railway Recruitment Board (RRB) Assistant Loco Pilot Exam 2025. Includes complete syllabus, eligibility, salary, and exam preparation strategy.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Civil India",
+      "url": "https://www.thecivilindia.in"
+    },
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Railway Job Aspirants"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.thecivilindia.in/career/railway/rrb-alp-exam",
+      "price": "Free",
+      "priceCurrency": "INR",
+      "eligibleRegion": {
+        "@type": "Country",
+        "name": "India"
+      }
+    }
+  }
+  `}</script>
+</Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
@@ -497,5 +561,6 @@ const RRBALPExamPage = () => {
     </div>
   );
 };
+
 
 export default RRBALPExamPage;
