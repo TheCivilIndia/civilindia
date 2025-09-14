@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   FaChevronDown,
   FaChevronUp,
@@ -111,6 +112,115 @@ const SSCCHSLPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+       <Helmet>
+  {/* ✅ Primary SEO Meta Tags */}
+  <title>SSC CHSL Exam 2025 Coaching | Eligibility, Syllabus & Preparation</title>
+  <meta
+    name="description"
+    content="Prepare for SSC CHSL Exam 2025 with Civil India. Get complete details on eligibility, exam structure, syllabus, posts available, salary, and expert preparation tips for LDC, JSA, PA, SA & DEO posts."
+  />
+  <meta
+    name="keywords"
+    content="SSC CHSL coaching Kanpur, SSC CHSL 2025 eligibility, SSC CHSL syllabus, SSC CHSL exam pattern, SSC CHSL posts, SSC CHSL salary, LDC JSA PA SA DEO exam, SSC 12th pass jobs"
+  />
+  <link
+    rel="canonical"
+    href="https://www.thecivilindia.in/career/ssc/chsl-exam"
+  />
+
+  {/* ✅ Open Graph for Facebook / LinkedIn */}
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="SSC CHSL Exam 2025 | Eligibility, Syllabus & Preparation"
+  />
+  <meta
+    property="og:description"
+    content="Comprehensive SSC CHSL 2025 guide – eligibility, syllabus, posts available (LDC, JSA, PA, SA, DEO), selection process, and preparation tips."
+  />
+  <meta
+    property="og:url"
+    content="https://www.thecivilindia.in/career/ssc/chsl-exam"
+  />
+  <meta
+    property="og:image"
+    content="https://www.thecivilindia.in/images/ssc-chsl-banner.jpg"
+  />
+  <meta property="og:site_name" content="Civil India" />
+
+  {/* ✅ Twitter Card for better previews */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:title"
+    content="SSC CHSL Exam 2025 Coaching | Civil India Kanpur"
+  />
+  <meta
+    name="twitter:description"
+    content="SSC CHSL 2025 preparation with Civil India. Covers eligibility, exam pattern, syllabus, posts (LDC, JSA, PA, SA, DEO) & expert tips."
+  />
+  <meta
+    name="twitter:image"
+    content="https://www.thecivilindia.in/images/ssc-chsl-banner.jpg"
+  />
+  <meta name="twitter:site" content="@CivilIndia" />
+
+  {/* ✅ Structured Data: Course Schema */}
+  <script type="application/ld+json">{`
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "SSC CHSL Exam Coaching 2025",
+    "description": "Civil India provides expert SSC CHSL coaching in Kanpur for LDC, JSA, PA, SA, and DEO posts. Includes syllabus, eligibility, salary details, and exam structure.",
+    "provider": {
+      "@type": "EducationalOrganization",
+      "name": "Civil India",
+      "url": "https://www.thecivilindia.in"
+    }
+  }
+  `}</script>
+
+  {/* ✅ Structured Data: FAQ Schema */}
+  <script type="application/ld+json">{`
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the SSC CHSL Exam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SSC CHSL (Combined Higher Secondary Level) is a recruitment exam for posts like LDC, JSA, PA, SA, and DEO in various central government departments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the eligibility for SSC CHSL 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Candidates must have passed 12th standard (Higher Secondary) from a recognized board and be between 18-27 years of age."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the selection process for SSC CHSL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The SSC CHSL selection process includes Tier 1 (CBT), Tier 2 (Mains Exam), and a Skill/Typing Test for certain posts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which posts are offered under SSC CHSL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The posts include Lower Division Clerk (LDC), Junior Secretariat Assistant (JSA), Postal Assistant (PA), Sorting Assistant (SA), and Data Entry Operator (DEO)."
+        }
+      }
+    ]
+  }
+  `}</script>
+</Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
