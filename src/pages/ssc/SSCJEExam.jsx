@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   FaChevronDown,
   FaChevronUp,
@@ -101,6 +102,51 @@ const SSCJEPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 mt-16">
+       {/* 🔹 SEO Helmet */}
+      <Helmet>
+        {/* Basic SEO */}
+        <title>SSC JE Exam 2025 | Eligibility, Syllabus, Salary & Preparation</title>
+        <meta
+          name="description"
+          content="Get complete details about SSC JE Exam 2025 including eligibility, syllabus, exam pattern, salary structure, and key highlights for Civil, Mechanical, and Electrical engineers."
+        />
+        <meta
+          name="keywords"
+          content="SSC JE 2025, SSC Junior Engineer exam, SSC JE syllabus, SSC JE eligibility, SSC JE salary, SSC JE Civil Engineering, SSC JE Mechanical Engineering, SSC JE Electrical Engineering"
+        />
+        <link
+          rel="canonical"
+          href="https://www.thecivilindia.in/ssc-je-exam"
+        />
+
+        {/* Open Graph (for Facebook, LinkedIn, WhatsApp) */}
+        <meta property="og:title" content="SSC JE Exam 2025 | Complete Guide" />
+        <meta
+          property="og:description"
+          content="Know everything about SSC JE Exam 2025: eligibility, syllabus, exam pattern, salary, and preparation tips for engineering graduates."
+        />
+        <meta
+          property="og:image"
+          content="https://www.thecivilindia.in/images/ssc-je-banner.jpg"
+        />
+        <meta property="og:url" content="https://www.thecivilindia.in/ssc-je-exam" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="SSC JE Exam 2025 | Eligibility & Syllabus" />
+        <meta
+          name="twitter:description"
+          content="SSC JE 2025: Get syllabus, eligibility, salary structure, and exam details for Civil, Mechanical, and Electrical engineers."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.thecivilindia.in/images/ssc-je-banner.jpg"
+        />
+
+        {/* Extra for Mobile */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Helmet>
       {/* Header Section */}
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 py-16 text-center">
