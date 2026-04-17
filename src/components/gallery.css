@@ -1,0 +1,138 @@
+/* 
+.swiper_container {
+  height: 38rem;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.swiper-slide {
+  width: 27rem;
+  height: 32rem;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .swiper_container {
+    height: 47rem;
+  }
+  .swiper-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .swiper-slide img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+
+.swiper-slide img {
+  width: 27rem;
+  height: 32rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+
+.swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+} */
+
+.swiper_container {
+  height: 38rem;
+  padding: 2rem 0;
+  position: relative;
+  /* Set a fixed height for larger screens */
+}
+
+@media (max-width: 1024px) {
+  /* Adjust container height for medium screens */
+  .swiper_container {
+    height: 37rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust container height for smaller screens */
+  .swiper_container {
+    height: 31rem;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Adjust container height for mobile devices */
+  .swiper_container {
+    height: 27rem;
+  }
+}
+
+.swiper-slide {
+  width: 27rem;
+  height: 32rem;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  /* Make slides smaller for tablets */
+  .swiper-slide {
+    width: 22rem;
+    height: 26rem;
+  }
+}
+
+@media (max-width: 500px) {
+  /* Make slides even smaller for mobile */
+  .swiper-slide {
+    width: 18rem;
+    height: 22rem;
+  }
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  object-fit: cover;
+  /* Ensure images cover the container while maintaining aspect ratio */
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  /* background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%; */
+}
+
+@media (max-width: 500px) {
+  /* Reduce arrow size for mobile screens */
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 1rem;
+    height: 1rem;
+  }
+}

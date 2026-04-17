@@ -1,0 +1,54 @@
+/* Add this to your CSS */
+.swiper-wrapper {
+  transition-timing-function: ease-in-out !important;
+}
+
+
+.flip-card {
+  transition: transform 0.8s ease-in-out;
+}
+.brand-slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+  
+/* 
+  .brand-slider {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .slider-track {
+    display: flex;
+    will-change: transform;
+    transition: transform 0.5s ease-out;
+  }
+  
+  
+  .brand-slider button {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .brand-slider:hover button {
+    opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .slider-track {
+      width: 500%;
+    }
+    .flip-card {
+      width: calc(100% / 2 - 1rem);
+    }
+  }
+  
+  
+  .flip-card {
+    flex: 0 0 auto;
+    width: calc(100% / 4 - 2rem);
+    margin: 0 1rem;
+  } */
