@@ -50,36 +50,23 @@ const galleryImages = [
   { id: 22, src: img22, alt: 'Recent Gathering',      tag: 'Events'    },
 ];
 
-const TAGS = ['All', 'Classes', 'Students', 'Faculty', 'Events', 'Campus'];
-
 // Show 2 rows × 4 columns = 8 images initially
 const INITIAL_VISIBLE = 8;
 
 function Gallery() {
-  const [activeTag, setActiveTag] = useState('All');
-  const [showAll, setShowAll]     = useState(false);
-  const [lightbox, setLightbox]   = useState(null);
+  const [showAll, setShowAll]   = useState(false);
+  const [lightbox, setLightbox] = useState(null);
 
-  const filtered = activeTag === 'All'
-    ? galleryImages
-    : galleryImages.filter(img => img.tag === activeTag);
-
-  const displayed = showAll ? filtered : filtered.slice(0, INITIAL_VISIBLE);
-  const hasMore   = filtered.length > INITIAL_VISIBLE;
-
-  // reset showAll whenever filter changes
-  const handleTagChange = (tag) => {
-    setActiveTag(tag);
-    setShowAll(false);
-  };
+  const displayed = showAll ? galleryImages : galleryImages.slice(0, INITIAL_VISIBLE);
+  const hasMore   = galleryImages.length > INITIAL_VISIBLE;
 
   // Keyboard navigation for lightbox
   const handleKey = useCallback((e) => {
     if (lightbox === null) return;
     if (e.key === 'Escape')      setLightbox(null);
-    if (e.key === 'ArrowRight')  setLightbox(i => (i + 1) % filtered.length);
-    if (e.key === 'ArrowLeft')   setLightbox(i => (i - 1 + filtered.length) % filtered.length);
-  }, [lightbox, filtered.length]);
+    if (e.key === 'ArrowRight')  setLightbox(i => (i + 1) % galleryImages.length);
+    if (e.key === 'ArrowLeft')   setLightbox(i => (i - 1 + galleryImages.length) % galleryImages.length);
+  }, [lightbox]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKey);
@@ -91,8 +78,8 @@ function Gallery() {
     return () => { document.body.style.overflow = ''; };
   }, [lightbox]);
 
-  const prevImage = (e) => { e.stopPropagation(); setLightbox(i => (i - 1 + filtered.length) % filtered.length); };
-  const nextImage = (e) => { e.stopPropagation(); setLightbox(i => (i + 1) % filtered.length); };
+  const prevImage = (e) => { e.stopPropagation(); setLightbox(i => (i - 1 + galleryImages.length) % galleryImages.length); };
+  const nextImage = (e) => { e.stopPropagation(); setLightbox(i => (i + 1) % galleryImages.length); };
 
   return (
     <section className="gallery-section" id="gallery">
@@ -106,18 +93,7 @@ function Gallery() {
         </p>
       </div>
 
-      {/* ── Filter Tabs ── */}
-      <div className="gallery-filters">
-        {TAGS.map(tag => (
-          <button
-            key={tag}
-            className={`filter-btn ${activeTag === tag ? 'active' : ''}`}
-            onClick={() => handleTagChange(tag)}
-          >
-            {tag}
-          </button>
-        ))}
-      </div>
+
 
       {/* ── Grid ── */}
       <div className="gallery-grid">
@@ -163,7 +139,7 @@ function Gallery() {
               </>
             ) : (
               <>
-                Show More ({filtered.length - INITIAL_VISIBLE} more photos)
+                Show More ({galleryImages.length - INITIAL_VISIBLE} more photos)
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <polyline points="6 9 12 15 18 9"/>
                 </svg>
@@ -189,11 +165,11 @@ function Gallery() {
           </button>
 
           <div className="lightbox-content" onClick={e => e.stopPropagation()}>
-            <img src={filtered[lightbox].src} alt={filtered[lightbox].alt} className="lightbox-img" />
+            <img src={galleryImages[lightbox].src} alt={galleryImages[lightbox].alt} className="lightbox-img" />
             <div className="lightbox-caption">
-              <span className="lightbox-tag">{filtered[lightbox].tag}</span>
-              <span className="lightbox-alt">{filtered[lightbox].alt}</span>
-              <span className="lightbox-counter">{lightbox + 1} / {filtered.length}</span>
+              <span className="lightbox-tag">{galleryImages[lightbox].tag}</span>
+              <span className="lightbox-alt">{galleryImages[lightbox].alt}</span>
+              <span className="lightbox-counter">{lightbox + 1} / {galleryImages.length}</span>
             </div>
           </div>
 
