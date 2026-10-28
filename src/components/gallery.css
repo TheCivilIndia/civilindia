@@ -1,138 +1,355 @@
-/* 
-.swiper_container {
-  height: 38rem;
-  padding: 2rem 0;
+/* ═══════════════════════════════════════════════════════════════
+   Gallery Section — Civil India
+   Matches site typography: Urbanist font, blue-600 headings,
+   bg-[#f9fafc] background, #0063ff accent
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Section wrapper ── */
+.gallery-section {
+  width: 100%;
+  background-color: #f9fafc;
+  padding: 2rem 1.25rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Header ── */
+.gallery-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+  max-width: 600px;
+}
+
+/* Matches: uppercase font-bold text-3xl md:text-4xl lg:text-5xl text-blue-600 */
+.gallery-title {
+  font-family: 'CustomFont', sans-serif;
+  font-size: clamp(1.875rem, 5vw, 3rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #2563eb;           /* text-blue-600 */
+  line-height: 1.15;
+  margin: 0 0 0.85rem;
+  letter-spacing: 0.01em;
+}
+
+/* Matches: font-semibold text-2xl sm:text-3xl */
+.gallery-subtitle {
+  font-family: 'CustomFont', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  color: #374151;           /* gray-700 */
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Filter tabs ── */
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  font-family: 'CustomFont', sans-serif;
+  padding: 0.4rem 1.15rem;
+  border-radius: 999px;
+  border: 2px solid #d1d5db;   /* gray-300 */
+  background: #ffffff;
+  color: #374151;               /* gray-700 */
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.filter-btn:hover {
+  border-color: #0063ff;
+  color: #0063ff;
+  background: #eff6ff;
+}
+
+.filter-btn.active {
+  background: #0063ff;
+  border-color: #0063ff;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 99, 255, 0.35);
+}
+
+/* ── Grid: 4 columns → 2 rows visible = 8 images ── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.875rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (max-width: 1024px) { .gallery-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px)  { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 380px)  { .gallery-grid { grid-template-columns: 1fr; } }
+
+/* ── Individual item ── */
+.gallery-item {
   position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  aspect-ratio: 4 / 3;
+  animation: galleryFadeIn 0.4s ease forwards;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.swiper-slide {
-  width: 27rem;
-  height: 32rem;
-  position: relative;
+@keyframes galleryFadeIn {
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 500px) {
-  .swiper_container {
-    height: 47rem;
-  }
-  .swiper-slide {
-    width: 28rem !important;
-    height: 36rem !important;
-  }
-  .swiper-slide img {
-    width: 28rem !important;
-    height: 36rem !important;
-  }
+.gallery-item:hover {
+  box-shadow: 0 10px 32px rgba(0, 99, 255, 0.22);
+  transform: translateY(-3px);
 }
 
-.swiper-slide img {
-  width: 27rem;
-  height: 32rem;
-  border-radius: 2rem;
-  object-fit: cover;
-}
-
-.swiper-slide-shadow-left,
-.swiper-slide-shadow-right {
-  display: none;
-}
-
-
-.swiper-pagination .swiper-pagination-bullet {
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-}
-
-.swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--primary);
-} */
-
-.swiper_container {
-  height: 38rem;
-  padding: 2rem 0;
-  position: relative;
-  /* Set a fixed height for larger screens */
-}
-
-@media (max-width: 1024px) {
-  /* Adjust container height for medium screens */
-  .swiper_container {
-    height: 37rem;
-  }
-}
-
-@media (max-width: 768px) {
-  /* Adjust container height for smaller screens */
-  .swiper_container {
-    height: 31rem;
-  }
-}
-
-@media (max-width: 500px) {
-  /* Adjust container height for mobile devices */
-  .swiper_container {
-    height: 27rem;
-  }
-}
-
-.swiper-slide {
-  width: 27rem;
-  height: 32rem;
-  position: relative;
-}
-
-@media (max-width: 768px) {
-  /* Make slides smaller for tablets */
-  .swiper-slide {
-    width: 22rem;
-    height: 26rem;
-  }
-}
-
-@media (max-width: 500px) {
-  /* Make slides even smaller for mobile */
-  .swiper-slide {
-    width: 18rem;
-    height: 22rem;
-  }
-}
-
-.swiper-slide img {
+.gallery-item img {
+  display: block;
   width: 100%;
   height: 100%;
-  border-radius: 2rem;
   object-fit: cover;
-  /* Ensure images cover the container while maintaining aspect ratio */
+  transition: transform 0.4s ease;
 }
 
-.swiper-slide-shadow-left,
-.swiper-slide-shadow-right {
-  display: none;
+.gallery-item:hover img {
+  transform: scale(1.07);
 }
 
-.swiper-pagination .swiper-pagination-bullet {
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+/* ── Hover overlay ── */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 40, 130, 0.82) 0%,
+    rgba(0, 99, 255, 0.28) 55%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  display: flex;
+  align-items: flex-end;
 }
 
-.swiper-pagination .swiper-pagination-bullet-active {
-  background: var(--primary);
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+
+.gallery-overlay-content {
+  padding: 0.75rem;
+  width: 100%;
+  transform: translateY(6px);
+  transition: transform 0.28s ease;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.gallery-item:hover .gallery-overlay-content { transform: translateY(0); }
+
+.overlay-tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  color: #bfdbfe;            /* blue-200 */
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  margin-bottom: 0.25rem;
+}
+
+.overlay-alt {
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  font-family: 'CustomFont', sans-serif;
+}
+
+.overlay-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/* ── Show More button ── */
+.gallery-show-more {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Matches site button style: blue, bold, rounded */
+.show-more-btn {
+  font-family: 'CustomFont', sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 2rem;
+  background: #0063ff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 2px solid #0063ff;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 99, 255, 0.3);
+}
+
+.show-more-btn:hover {
+  background: #0052d4;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(0, 99, 255, 0.4);
+}
+
+.show-more-btn:active {
+  transform: translateY(0);
+}
+
+/* ════════════════════════════════════════════════
+   Lightbox
+════════════════════════════════════════════════ */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(5, 15, 50, 0.92);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1rem;
-  height: 1rem;
-  /* background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%; */
+  animation: lbFadeIn 0.2s ease;
 }
 
+@keyframes lbFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: lbZoomIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes lbZoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.lightbox-img {
+  max-width: 88vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 14px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.55);
+}
+
+.lightbox-caption {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lightbox-tag {
+  background: #0063ff;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.7rem;
+  border-radius: 999px;
+}
+
+.lightbox-alt {
+  color: #e2e8f0;
+  font-family: 'CustomFont', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.lightbox-counter {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+/* ── Lightbox close button ── */
+.lightbox-close {
+  position: fixed;
+  top: 1.1rem;
+  right: 1.1rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 10001;
+}
+
+.lightbox-close:hover { background: rgba(255, 255, 255, 0.22); }
+
+/* ── Lightbox arrows ── */
+.lightbox-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(6px);
+  border: 1.5px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  z-index: 10001;
+}
+
+.lightbox-arrow:hover {
+  background: rgba(0, 99, 255, 0.55);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.lightbox-prev { left: 1.1rem; }
+.lightbox-next { right: 1.1rem; }
+
 @media (max-width: 500px) {
-  /* Reduce arrow size for mobile screens */
-  .swiper-button-prev,
-  .swiper-button-next {
-    width: 1rem;
-    height: 1rem;
-  }
+  .lightbox-prev { left: 0.4rem; }
+  .lightbox-next { right: 0.4rem; }
 }

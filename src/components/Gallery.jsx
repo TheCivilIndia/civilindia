@@ -1,206 +1,211 @@
-
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import { useState, useEffect, useCallback } from 'react';
 import './gallery.css';
-import { FaArrowLeft } from "react-icons/fa6";
-import { FaArrowRight } from "react-icons/fa6";
 
-import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules'; // Import Autoplay module
+// ── Import all 22 photos from Gallary folder ──────────────────────────────────
+import img1  from '../assets/Gallary/IMG_20250429_110512364_AE - Copy (2).jpg';
+import img2  from '../assets/Gallary/JUNIOR.jpg';
+import img3  from '../assets/Gallary/NVS_3312.JPG';
+import img4  from '../assets/Gallary/NVS_3346.JPG';
+import img5  from '../assets/Gallary/NVS_3349.JPG';
+import img6  from '../assets/Gallary/NVS_3419.JPG';
+import img7  from '../assets/Gallary/NVS_3425.JPG';
+import img8  from '../assets/Gallary/NVS_3440.JPG';
+import img9  from '../assets/Gallary/NVS_3447.JPG';
+import img10 from '../assets/Gallary/NVS_3459.JPG';
+import img11 from '../assets/Gallary/NVS_3489.JPG';
+import img12 from '../assets/Gallary/NVS_3495.JPG';
+import img13 from '../assets/Gallary/NVS_3499.JPG';
+import img14 from '../assets/Gallary/NVS_3580.JPG';
+import img15 from '../assets/Gallary/NVS_3591.JPG';
+import img16 from '../assets/Gallary/PRIMARY.jpg';
+import img17 from '../assets/Gallary/Untitled-2.jpg';
+import img18 from '../assets/Gallary/WhatsApp Image 2025-05-31 at 5.48.10 PM.jpeg';
+import img19 from '../assets/Gallary/WhatsApp Image 2025-06-19 at 5.59.03 PM.jpeg';
+import img20 from '../assets/Gallary/WhatsApp Image 2026-08-22 at 9.57.44 AM (1).jpeg';
+import img21 from '../assets/Gallary/WhatsApp Image 2026-08-22 at 9.57.46 AM.jpeg';
+import img22 from '../assets/Gallary/WhatsApp Image 2026-09-10 at 10.22.56 PM.jpeg';
 
-import slide_image_1 from '../assets/images/gallery/gallery1.jpg';
-import slide_image_2 from '../assets/images/gallery/gallery2.jpg';
-import slide_image_3 from '../assets/images/img_3.jpg';
-import slide_image_4 from '../assets/images/gallery/gallery4.jpg';
-import slide_image_5 from '../assets/images/img_5.jpg';
-import slide_image_6 from '../assets/images/img_6.jpg';
-import slide_image_7 from '../assets/images/img_7.jpg';
+const galleryImages = [
+  { id: 1,  src: img1,  alt: 'Campus Life',          tag: 'Campus'    },
+  { id: 2,  src: img2,  alt: 'Junior Batch',          tag: 'Students'  },
+  { id: 3,  src: img3,  alt: 'Classroom Session',     tag: 'Classes'   },
+  { id: 4,  src: img4,  alt: 'Study Hall',            tag: 'Classes'   },
+  { id: 5,  src: img5,  alt: 'Group Discussion',      tag: 'Students'  },
+  { id: 6,  src: img6,  alt: 'Lecture Hall',          tag: 'Classes'   },
+  { id: 7,  src: img7,  alt: 'Batch Interaction',     tag: 'Students'  },
+  { id: 8,  src: img8,  alt: 'Faculty Mentoring',     tag: 'Faculty'   },
+  { id: 9,  src: img9,  alt: 'Seminar Session',       tag: 'Events'    },
+  { id: 10, src: img10, alt: 'Exam Preparation',      tag: 'Students'  },
+  { id: 11, src: img11, alt: 'Morning Assembly',      tag: 'Campus'    },
+  { id: 12, src: img12, alt: 'Library Study',         tag: 'Campus'    },
+  { id: 13, src: img13, alt: 'Student Achievement',   tag: 'Events'    },
+  { id: 14, src: img14, alt: 'Annual Ceremony',       tag: 'Events'    },
+  { id: 15, src: img15, alt: 'Award Function',        tag: 'Events'    },
+  { id: 16, src: img16, alt: 'Primary Batch',         tag: 'Students'  },
+  { id: 17, src: img17, alt: 'Institute View',        tag: 'Campus'    },
+  { id: 18, src: img18, alt: 'Cultural Event',        tag: 'Events'    },
+  { id: 19, src: img19, alt: 'Success Celebration',   tag: 'Events'    },
+  { id: 20, src: img20, alt: 'Special Workshop',      tag: 'Faculty'   },
+  { id: 21, src: img21, alt: 'Faculty Meet',          tag: 'Faculty'   },
+  { id: 22, src: img22, alt: 'Recent Gathering',      tag: 'Events'    },
+];
 
-// Importing React Icons for the arrows
+const TAGS = ['All', 'Classes', 'Students', 'Faculty', 'Events', 'Campus'];
 
+// Show 2 rows × 4 columns = 8 images initially
+const INITIAL_VISIBLE = 8;
 
 function Gallery() {
+  const [activeTag, setActiveTag] = useState('All');
+  const [showAll, setShowAll]     = useState(false);
+  const [lightbox, setLightbox]   = useState(null);
+
+  const filtered = activeTag === 'All'
+    ? galleryImages
+    : galleryImages.filter(img => img.tag === activeTag);
+
+  const displayed = showAll ? filtered : filtered.slice(0, INITIAL_VISIBLE);
+  const hasMore   = filtered.length > INITIAL_VISIBLE;
+
+  // reset showAll whenever filter changes
+  const handleTagChange = (tag) => {
+    setActiveTag(tag);
+    setShowAll(false);
+  };
+
+  // Keyboard navigation for lightbox
+  const handleKey = useCallback((e) => {
+    if (lightbox === null) return;
+    if (e.key === 'Escape')      setLightbox(null);
+    if (e.key === 'ArrowRight')  setLightbox(i => (i + 1) % filtered.length);
+    if (e.key === 'ArrowLeft')   setLightbox(i => (i - 1 + filtered.length) % filtered.length);
+  }, [lightbox, filtered.length]);
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [handleKey]);
+
+  useEffect(() => {
+    document.body.style.overflow = lightbox !== null ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [lightbox]);
+
+  const prevImage = (e) => { e.stopPropagation(); setLightbox(i => (i - 1 + filtered.length) % filtered.length); };
+  const nextImage = (e) => { e.stopPropagation(); setLightbox(i => (i + 1) % filtered.length); };
+
   return (
-    <div className="w-full relative py-12 flex flex-col items-center justify-center">
-      <h1 className="heading text-center text-5xl text-blue-500 font-bold tracking-wide py-6">Picture Gallery</h1>
-      <p className='max-w-4xl text-xl font-semibold text-center tracking-wide content-center'>Explore the journey of IAS & PCS aspirants at CivilIndia through our gallery. From engaging classes to success celebrations, witness the dedication, guidance, and achievements that define our institute.</p>
+    <section className="gallery-section" id="gallery">
 
-      {/* Left and Right Tint Overlays */}
-      {/* <div className="tint-overlay left-tint z-20"></div>
-      <div className="tint-overlay right-tint z-10"></div> */}
-        <div className='w-full'>
-          <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={'auto'}
-        autoplay={{
-          delay: 1000, // Set autoplay delay to 1 second (1000 milliseconds)
-          disableOnInteraction: false, // Continue autoplay after user interaction
-          pauseOnMouseEnter: true, // Pause autoplay on hover
-        }}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ el: '.swiper-pagination', clickable: true }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation, Autoplay]} // Include Autoplay module
-        className="swiper_container w-full"
-      >
-        <SwiperSlide>
-          <img src={slide_image_1} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_2} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_3} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_4} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_5} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_6} alt="slide_image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_7} alt="slide_image" />
-        </SwiperSlide>
+      {/* ── Header — matches site typography ── */}
+      <div className="gallery-header">
+        <h1 className="gallery-title">PICTURE GALLERY</h1>
+        <p className="gallery-subtitle">
+          Explore the journey of IAS &amp; PCS aspirants at Civil India — from engaging
+          classes and seminars to success celebrations and memorable events.
+        </p>
+      </div>
 
-        {/* Custom Navigation Arrows using React Icons */}
-        <div className="absolute top-1/2 left-1 transform -translate-y-1/2 z-110">
-          <div className="swiper-button-prev slider-arrow text-white p-2 rounded-full z-110">
-            <FaArrowLeft/>
+      {/* ── Filter Tabs ── */}
+      <div className="gallery-filters">
+        {TAGS.map(tag => (
+          <button
+            key={tag}
+            className={`filter-btn ${activeTag === tag ? 'active' : ''}`}
+            onClick={() => handleTagChange(tag)}
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
+
+      {/* ── Grid ── */}
+      <div className="gallery-grid">
+        {displayed.map((img, idx) => (
+          <div
+            key={img.id}
+            className="gallery-item"
+            style={{ animationDelay: `${(idx % 8) * 50}ms` }}
+            onClick={() => setLightbox(idx)}
+          >
+            <img src={img.src} alt={img.alt} loading="lazy" />
+            <div className="gallery-overlay">
+              <div className="gallery-overlay-content">
+                <span className="overlay-tag">{img.tag}</span>
+                <p className="overlay-alt">{img.alt}</p>
+                <span className="overlay-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    <line x1="11" y1="8" x2="11" y2="14"/>
+                    <line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="absolute top-1/2 right-3 transform -translate-y-1/2 z-200">
-          <div className="swiper-button-next slider-arrow text-white p-2 rounded-full z-110">
-            <FaArrowRight />
-          </div>
-        </div>
+        ))}
+      </div>
 
-        {/* Pagination */}
-        <div className="swiper-pagination"></div>
-      </Swiper>
+      {/* ── Show More / Show Less ── */}
+      {hasMore && (
+        <div className="gallery-show-more">
+          <button
+            className="show-more-btn"
+            onClick={() => setShowAll(prev => !prev)}
+          >
+            {showAll ? (
+              <>
+                Show Less
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <polyline points="18 15 12 9 6 15"/>
+                </svg>
+              </>
+            ) : (
+              <>
+                Show More ({filtered.length - INITIAL_VISIBLE} more photos)
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </>
+            )}
+          </button>
         </div>
-      
-    </div>
+      )}
+
+      {/* ── Lightbox ── */}
+      {lightbox !== null && (
+        <div className="lightbox-backdrop" onClick={() => setLightbox(null)}>
+          <button className="lightbox-close" onClick={() => setLightbox(null)} aria-label="Close">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+          </button>
+
+          <button className="lightbox-arrow lightbox-prev" onClick={prevImage} aria-label="Previous">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+          </button>
+
+          <div className="lightbox-content" onClick={e => e.stopPropagation()}>
+            <img src={filtered[lightbox].src} alt={filtered[lightbox].alt} className="lightbox-img" />
+            <div className="lightbox-caption">
+              <span className="lightbox-tag">{filtered[lightbox].tag}</span>
+              <span className="lightbox-alt">{filtered[lightbox].alt}</span>
+              <span className="lightbox-counter">{lightbox + 1} / {filtered.length}</span>
+            </div>
+          </div>
+
+          <button className="lightbox-arrow lightbox-next" onClick={nextImage} aria-label="Next">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </button>
+        </div>
+      )}
+    </section>
   );
 }
 
 export default Gallery;
-
-// import Slider from 'react-slick';
-// import { FaArrowLeft, FaArrowRight } from 'react-icons/fa6';
-// import { motion } from 'framer-motion'; // Import framer-motion for animation
-// import './gallery.css'; // Your custom styles
-
-// import slide_image_1 from '../assets/images/gallery/gallery1.jpg';
-// import slide_image_2 from '../assets/images/gallery/gallery2.jpg';
-// import slide_image_3 from '../assets/images/img_3.jpg';
-// import slide_image_4 from '../assets/images/gallery/gallery4.jpg';
-// import slide_image_5 from '../assets/images/img_5.jpg';
-// import slide_image_6 from '../assets/images/img_6.jpg';
-// import slide_image_7 from '../assets/images/img_7.jpg';
-
-// function NextArrow(props) {
-//   const { onClick } = props;
-//   return (
-//     <div className="absolute top-1/2 right-0 transform -translate-y-1/2 z-110 cursor-pointer">
-//       <div className="slider-arrow text-white p-2 rounded-full" onClick={onClick}>
-//         <FaArrowRight size={20} />
-//       </div>
-//     </div>
-//   );
-// }
-
-// function PrevArrow(props) {
-//   const { onClick } = props;
-//   return (
-//     <div className="absolute top-1/2 left-0 transform -translate-y-1/2 z-110 cursor-pointer">
-//       <div className="slider-arrow text-white p-2 rounded-full" onClick={onClick}>
-//         <FaArrowLeft size={20} />
-//       </div>
-//     </div>
-//   );
-// }
-
-// function Gallery() {
-//   const settings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     centerMode: true,
-//     centerPadding: '0px', // No extra padding on sides
-//     autoplay: true,
-//     autoplaySpeed: 1000,
-//     pauseOnHover: true,
-//     nextArrow: <NextArrow />,
-//     prevArrow: <PrevArrow />,
-//     responsive: [
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           slidesToShow: 1,
-//           centerMode: true,
-//         },
-//       },
-//     ],
-//   };
-
-//   const images = [
-//     slide_image_1,
-//     slide_image_2,
-//     slide_image_3,
-//     slide_image_4,
-//     slide_image_5,
-//     slide_image_6,
-//     slide_image_7,
-//   ];
-
-//   return (
-//     <div className="w-11/12 px-10 relative py-12 flex flex-col items-center justify-center">
-//       <h1 className="heading text-center text-5xl text-blue-500 font-bold tracking-wide py-6">
-//         Picture Gallery
-//       </h1>
-//       <p className="max-w-4xl text-xl font-semibold text-center tracking-wide content-center">
-//         Explore the journey of IAS & PCS aspirants at CivilIndia through our gallery. From engaging
-//         classes to success celebrations, witness the dedication, guidance, and achievements that
-//         define our institute.
-//       </p>
-
-//       {/* Slick Slider */}
-//       <div className="w-full mt-8">
-//         <Slider {...settings}>
-//           {images.map((image, index) => (
-//             <motion.div
-//               key={index}
-//               className="slide-container"
-//               whileHover={{ scale: 1.1 }} // Enlarge slightly on hover
-//               whileTap={{ scale: 0.95 }} // Shrink slightly on tap
-//             >
-//               <img src={image} alt={`slide_image_${index + 1}`} className="slider-image" />
-//             </motion.div>
-//           ))}
-//         </Slider>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Gallery;

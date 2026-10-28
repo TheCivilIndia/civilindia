@@ -8,6 +8,8 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
+  // Tell Vite to treat uppercase extensions as static assets (case-sensitive on some systems)
+  assetsInclude: ['**/*.JPG', '**/*.JPEG', '**/*.PNG', '**/*.GIF', '**/*.WEBP'],
   optimizeDeps: {
     include: ['swiper'],
   },

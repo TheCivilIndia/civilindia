@@ -107,7 +107,7 @@ const Home = () => {
         <Courses id="course"/>
         <WhyChooseUs/>
         <NumberCounter/>
-        {/* <Gallery/> */}
+        <Gallery/>
         <Testimonial/>
         <DownloadApp/>
         <Result id="result"/>
